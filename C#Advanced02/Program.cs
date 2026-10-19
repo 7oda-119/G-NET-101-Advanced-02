@@ -17,6 +17,11 @@ internal class Program
          *   Answer: Multiple type parameters allow you to define a generic class or method that can work with more than one data type.
          */
 
+        /*
+         *   Q4: What is a generic method?
+         *   Answer: A generic method is a method that uses a type parameter (T) so it can work with different data types without rewriting the method.
+         */
+
         #endregion
 
         #region Practical
@@ -39,6 +44,15 @@ internal class Program
         //pair.Display();
 
 
+        #region Qu04
+        //int n1 = 10, n2 = 20;
+        //Utility.Swap(ref n1, ref n2);
+        //Console.WriteLine($"n1 = {n1}, n2 = {n2}");
+
+        //double d1 = 1.5, d2 = 2.5;
+        //Utility.Swap(ref d1, ref d2);
+        //Console.WriteLine($"d1 = {d1}, d2 = {d2}");
+        #endregion
 
         #endregion
         #endregion
