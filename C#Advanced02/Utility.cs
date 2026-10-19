@@ -8,4 +8,13 @@ internal class Utility
         a = b;
         b = temp;
     }
+
+    public static T FindMax<T>(T a, T b) where T : IComparable<T>
+    {
+        if(a.CompareTo(b) < 0)
+            return b;
+
+        else 
+            return a;
+    }
 }

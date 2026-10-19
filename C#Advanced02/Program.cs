@@ -54,7 +54,14 @@ internal class Program
         //Console.WriteLine($"d1 = {d1}, d2 = {d2}");
         #endregion
 
+        #region Qu05
+        //Console.WriteLine(Utility.FindMax(10, 20));
+        //Console.WriteLine(Utility.FindMax(2.5, 2.5));
+        //Console.WriteLine(Utility.FindMax("Ali", "Samy"));  // Comparison is based on lexicographical order
         #endregion
+
+        #endregion
+
         #endregion
 
     }
