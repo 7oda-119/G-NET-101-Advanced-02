@@ -22,6 +22,11 @@ internal class Program
          *   Answer: A generic method is a method that uses a type parameter (T) so it can work with different data types without rewriting the method.
          */
 
+        /*
+         *   Q6: What is a generic interface?
+         *   Answer: A generic interface is an interface that uses a type parameter (T), allowing it to be implemented by classes that work with different data types.
+         */
+
         #endregion
 
         #region Practical
