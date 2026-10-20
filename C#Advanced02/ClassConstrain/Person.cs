@@ -3,4 +3,8 @@
 internal class Person
 {
     public string Name { get; set; }
+    public void Display()
+    {
+        Console.WriteLine($"Name: {Name}");
+    }
 }

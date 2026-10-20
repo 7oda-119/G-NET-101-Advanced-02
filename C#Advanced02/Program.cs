@@ -1,4 +1,5 @@
-﻿using C_Advanced02.ClassConstrain;
+﻿using C_Advanced02.BaseClassConstrain;
+using C_Advanced02.ClassConstrain;
 using C_Advanced02.InterfaceConstrain;
 using C_Advanced02.NewConstrain;
 using C_Advanced02.StructConstrain;
@@ -55,6 +56,13 @@ internal class Program
          *   Answer: The interface constraint is a generic type constraint that restricts the type parameter that implements a specific interface.
          *           Example : public class MyGenericClass<T> where T : IPrintable { }     ==> T must implement the IPrintable interface
          */
+
+        /*
+         *   Q11: What is the base class constraint? Write an example.
+         *   Answer: The base class constraint is a generic type constraint that restricts the type parameter that inherits from a specific base class.
+         *           Example : public class Manager<T> where T : Person { }     ==> T must inherit from the Person class
+         */
+
 
         #endregion
 
@@ -119,6 +127,15 @@ internal class Program
         //printer.PrintItem(image);
         //Person person = new Person();
         //printer.PrintItem(person);  // This will cause a compile-time error because Person does not implement IPrintable
+        #endregion
+
+        #region Qu11
+        //Employee person = new Employee();
+        //Manager<Employee> manager = new Manager<Employee>();
+        //manager.DisplayInfo(person);
+
+        //Student student = new Student();
+        //Manager<Student> studentManager = new Manager<Student>();  // This will cause a compile-time error because Student does not inherit from Person
         #endregion
         #endregion
 
