@@ -1,4 +1,5 @@
 ﻿using C_Advanced02.ClassConstrain;
+using C_Advanced02.NewConstrain;
 using C_Advanced02.StructConstrain;
 
 namespace C_Advanced02;
@@ -40,6 +41,12 @@ internal class Program
          *   Q8: What is the 'class' constraint? Write an example.
          *   Answer: The 'class' constraint is a generic type constraint that restricts the type parameter to reference types only (classes).
          *           Example : public class Repository<T> where T : class { }     ==> T can be any reference type (string, object, etc.) but not a value type
+         */
+
+        /*
+         *   Q9: What is the 'new()' constraint? Write an example.
+         *   Answer: The 'new()' constraint is a generic type constraint that restricts the type parameter to types that have a public parameterless constructor.
+         *           Example : public class Factory<T> where T : new() { }     ==> T must have a public parameterless constructor
          */
 
 
@@ -92,6 +99,12 @@ internal class Program
         //Repository<string> stringRepository = new Repository<string>("Hello");
         //Repository<Person> personRepository = new Repository<Person>(new Person { Name = "John" });
         //Repository<int> intRepository = new Repository<int>(42);  // This will cause a compile-time error because int is a value type
+        #endregion
+
+        #region Qu09
+        //Factory<Person> personFactory = new Factory<Person>();
+        //Factory<Student> studentFactory = new Factory<Student>();
+        //Factory<string> stringFactory = new Factory<string>();  // This will cause a compile-time error because string does not have a public parameterless constructor
         #endregion
 
         #endregion
