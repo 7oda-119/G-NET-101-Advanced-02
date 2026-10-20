@@ -1,4 +1,6 @@
-﻿namespace C_Advanced02;
+﻿using C_Advanced02.StructConstrain;
+
+namespace C_Advanced02;
 
 internal class Program
 {
@@ -25,6 +27,12 @@ internal class Program
         /*
          *   Q6: What is a generic interface?
          *   Answer: A generic interface is an interface that uses a type parameter (T), allowing it to be implemented by classes that work with different data types.
+         */
+
+        /*
+         *   Q7: What is the 'struct' constraint? Write an example.
+         *   Answer: The 'struct' constraint is a generic type constraint that restricts the type parameter to value types only (structs).
+         *           Example : public class Box<T> where T : struct { }     ==> T can be any value type (int, float, double, etc.) but not a reference type
          */
 
         #endregion
@@ -63,6 +71,13 @@ internal class Program
         //Console.WriteLine(Utility.FindMax(10, 20));
         //Console.WriteLine(Utility.FindMax(2.5, 2.5));
         //Console.WriteLine(Utility.FindMax("Ali", "Samy"));  // Comparison is based on lexicographical order
+        #endregion
+
+        #region Qu07
+        //Box<int> intBox = new Box<int>();
+        //Box<double> doubleBox = new Box<double>();
+        //Box<decimal> decimalBox = new Box<decimal>();
+        //Box<string> stringBox = new Box<string>();   // This will cause a compile-time error because string is a reference type
         #endregion
 
         #endregion
