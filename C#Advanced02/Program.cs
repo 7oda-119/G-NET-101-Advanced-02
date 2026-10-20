@@ -1,4 +1,5 @@
-﻿using C_Advanced02.StructConstrain;
+﻿using C_Advanced02.ClassConstrain;
+using C_Advanced02.StructConstrain;
 
 namespace C_Advanced02;
 
@@ -34,6 +35,13 @@ internal class Program
          *   Answer: The 'struct' constraint is a generic type constraint that restricts the type parameter to value types only (structs).
          *           Example : public class Box<T> where T : struct { }     ==> T can be any value type (int, float, double, etc.) but not a reference type
          */
+
+        /*
+         *   Q8: What is the 'class' constraint? Write an example.
+         *   Answer: The 'class' constraint is a generic type constraint that restricts the type parameter to reference types only (classes).
+         *           Example : public class Repository<T> where T : class { }     ==> T can be any reference type (string, object, etc.) but not a value type
+         */
+
 
         #endregion
 
@@ -78,6 +86,12 @@ internal class Program
         //Box<double> doubleBox = new Box<double>();
         //Box<decimal> decimalBox = new Box<decimal>();
         //Box<string> stringBox = new Box<string>();   // This will cause a compile-time error because string is a reference type
+        #endregion
+
+        #region Qu08
+        //Repository<string> stringRepository = new Repository<string>("Hello");
+        //Repository<Person> personRepository = new Repository<Person>(new Person { Name = "John" });
+        //Repository<int> intRepository = new Repository<int>(42);  // This will cause a compile-time error because int is a value type
         #endregion
 
         #endregion
