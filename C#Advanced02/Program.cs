@@ -1,6 +1,7 @@
 ﻿using C_Advanced02.BaseClassConstrain;
 using C_Advanced02.ClassConstrain;
 using C_Advanced02.InterfaceConstrain;
+using C_Advanced02.MultibleConstrain;
 using C_Advanced02.NewConstrain;
 using C_Advanced02.StructConstrain;
 
@@ -63,6 +64,12 @@ internal class Program
          *           Example : public class Manager<T> where T : Person { }     ==> T must inherit from the Person class
          */
 
+        /*
+         *   Q12: How do you apply multiple constraints? Write an example. 
+         *   Answer: You can apply multiple constraints by separating them with commas in the where clause. The constraints must be specified in the following order:
+         *           The first One of struct, class, or a base class. Second One or more interfaces. Third the new() constraint (must be last)
+         *           Example : public class SoundPlayer<T> where T : class, ISound, new() { }     ==> T must be a reference type, implement the ISound interface, and have a public parameterless constructor
+         */
 
         #endregion
 
@@ -136,6 +143,13 @@ internal class Program
 
         //Student student = new Student();
         //Manager<Student> studentManager = new Manager<Student>();  // This will cause a compile-time error because Student does not inherit from Person
+        #endregion
+
+        #region Qu12
+        //SoundPlayer<Dog> dogSound = new SoundPlayer<Dog>();
+        //dogSound.Play();
+
+        //SoundPlayer<Cat> catSound = new SoundPlayer<Cat>();  // This will cause a compile-time error because Cat does not implement ISound
         #endregion
         #endregion
 
