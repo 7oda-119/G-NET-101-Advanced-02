@@ -1,4 +1,5 @@
 ﻿using C_Advanced02.ClassConstrain;
+using C_Advanced02.InterfaceConstrain;
 using C_Advanced02.NewConstrain;
 using C_Advanced02.StructConstrain;
 
@@ -49,6 +50,11 @@ internal class Program
          *           Example : public class Factory<T> where T : new() { }     ==> T must have a public parameterless constructor
          */
 
+        /*
+         *   Q10: What is the interface constraint? Write an example.
+         *   Answer: The interface constraint is a generic type constraint that restricts the type parameter that implements a specific interface.
+         *           Example : public class MyGenericClass<T> where T : IPrintable { }     ==> T must implement the IPrintable interface
+         */
 
         #endregion
 
@@ -107,6 +113,13 @@ internal class Program
         //Factory<string> stringFactory = new Factory<string>();  // This will cause a compile-time error because string does not have a public parameterless constructor
         #endregion
 
+        #region Qu10
+        //Image image = new Image();
+        //Printer<Image> printer = new Printer<Image>();
+        //printer.PrintItem(image);
+        //Person person = new Person();
+        //printer.PrintItem(person);  // This will cause a compile-time error because Person does not implement IPrintable
+        #endregion
         #endregion
 
         #endregion
