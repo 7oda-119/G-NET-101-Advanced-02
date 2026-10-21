@@ -1,6 +1,7 @@
 ﻿using C_Advanced02.BaseClassConstrain;
 using C_Advanced02.ClassConstrain;
 using C_Advanced02.InAndOut;
+using C_Advanced02.InheritanceInGenerics;
 using C_Advanced02.InterfaceConstrain;
 using C_Advanced02.MultibleConstrain;
 using C_Advanced02.NewConstrain;
@@ -96,6 +97,11 @@ internal class Program
         /*
          *   Q18: How do static members work in generic types?
          *    Answer: Static members in generic types are separate for each closed generic type. This means that each type parameter gets its own copy of the static field, property, or method.
+         */
+
+        /*
+         *   Q19: How can you inherit from a generic class?
+         *   Answer: A class can inherit from a generic class by specifying a concrete type or by remaining generic itself.
          */
         #endregion
 
@@ -217,6 +223,14 @@ internal class Program
         //Counter<string> counter05 = new Counter<string>();
         //Console.WriteLine(Counter<int>.count);       // return 3
         //Console.WriteLine(Counter<string>.count);    // return 2
+        #endregion
+
+        #region Qu19
+        //NumberData data = new NumberData(5);
+        //Console.WriteLine(data.Value);
+
+        //Store<string> store = new Store<string>("Ali");
+        //Console.WriteLine(store.Value);
         #endregion
         #endregion
 
