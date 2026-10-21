@@ -92,6 +92,11 @@ internal class Program
          *   Answer: Covariance (out): Uses the out keyword. Used for output/return values. It allows assigning a generic type with a derived type to one with a base type.
          *           Contravariance (in): Uses the in keyword. Used for input parameters. It allows assigning a generic type with a base type to one with a derived type.
          */
+
+        /*
+         *   Q18: How do static members work in generic types?
+         *    Answer: Static members in generic types are separate for each closed generic type. This means that each type parameter gets its own copy of the static field, property, or method.
+         */
         #endregion
 
         #region Practical
@@ -201,6 +206,17 @@ internal class Program
         //IProcessor<Vehical> vechicalProducer = new VehicleProcessor();   // vechicalProducer points to a VehicleProcessor object
         //IProcessor<Car> carProcesseor = vechicalProducer;                // Contravariance: IProcessor<Vehicle> can be assigned to IProcessor<Car>
         //carProcesseor.Processs(new Car("Hundai"));                       // A Car object is passed to Process(), This is valid because Car inherits from Vehicle ==> Car is a Vehical
+        #endregion
+
+        #region Question18
+        //Counter<int> counter01 = new Counter<int>();
+        //Counter<int> counter02 = new Counter<int>();
+        //Counter<int> counter03 = new Counter<int>();
+
+        //Counter<string> counter04 = new Counter<string>();
+        //Counter<string> counter05 = new Counter<string>();
+        //Console.WriteLine(Counter<int>.count);       // return 3
+        //Console.WriteLine(Counter<string>.count);    // return 2
         #endregion
         #endregion
 
