@@ -81,6 +81,11 @@ internal class Program
          *   Q15: What is covariance? Explain the 'out' keyword.
          *   Answer: Covariance allows you to use a more derived (child) type than originally specified, Its applied to output positions (such as return types of methods or read-only properities) and is marked with the out keyword.
          */
+
+        /*
+         *   Q16: What is contravariance? Explain the 'in' keyword.
+         *   Answer: Contravariance allows you to use a less derived (parent/base) type than originally specified. It is applied to input positions (such as method parameters) and is marked with the in keyword.
+         */
         #endregion
 
         #region Practical
@@ -184,6 +189,12 @@ internal class Program
         //IProducer<Vehical> vehicalProducer = carProducer;   // Covariance: IProducer<Car> can be assigned to IProducer<Vehicle>
         //Vehical vehicle = vehicalProducer.Get();            // Get() returns a Car object, but it is stored in a Vehicle reference
         //Console.WriteLine(vehicle.GetType().Name);
+        #endregion
+
+        #region Qu16
+        //IProcessor<Vehical> vechicalProducer = new VehicleProcessor();   // vechicalProducer points to a VehicleProcessor object
+        //IProcessor<Car> carProcesseor = vechicalProducer;                // Contravariance: IProcessor<Vehicle> can be assigned to IProcessor<Car>
+        //carProcesseor.Processs(new Car("Hundai"));                       // A Car object is passed to Process(), This is valid because Car inherits from Vehicle ==> Car is a Vehical
         #endregion
         #endregion
 
