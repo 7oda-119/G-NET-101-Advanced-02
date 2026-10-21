@@ -86,6 +86,12 @@ internal class Program
          *   Q16: What is contravariance? Explain the 'in' keyword.
          *   Answer: Contravariance allows you to use a less derived (parent/base) type than originally specified. It is applied to input positions (such as method parameters) and is marked with the in keyword.
          */
+
+        /*
+         *   Q17: What is the difference between covariance and contravariance?
+         *   Answer: Covariance (out): Uses the out keyword. Used for output/return values. It allows assigning a generic type with a derived type to one with a base type.
+         *           Contravariance (in): Uses the in keyword. Used for input parameters. It allows assigning a generic type with a base type to one with a derived type.
+         */
         #endregion
 
         #region Practical
