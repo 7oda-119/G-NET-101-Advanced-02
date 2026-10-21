@@ -155,6 +155,23 @@ internal class Program
 
         //SoundPlayer<Cat> catSound = new SoundPlayer<Cat>();  // This will cause a compile-time error because Cat does not implement ISound
         #endregion
+
+        #region Qu14
+        //SafeList<int> numbers = new SafeList<int>();
+        //numbers.AddItem(10);
+        //numbers.AddItem(15);
+        //numbers.AddItem(20);
+
+        //Console.WriteLine(numbers.GetItem(1)); 
+        //Console.WriteLine(numbers.GetItem(5));  // output will be 0 because there are no index 5
+
+        //SafeList<string> names = new SafeList<string>();
+        //names.AddItem("Ahmed");
+        //names.AddItem("Ali");
+
+        //Console.WriteLine(names.GetItem(0)); 
+        //Console.WriteLine(names.GetItem(4));  // output will be null because there are no index 4
+        #endregion
         #endregion
 
         #endregion
