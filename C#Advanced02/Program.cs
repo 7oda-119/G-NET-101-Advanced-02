@@ -232,6 +232,22 @@ internal class Program
         //Store<string> store = new Store<string>("Ali");
         //Console.WriteLine(store.Value);
         #endregion
+
+        #region Qu20
+        //Cache<int, string> cache = new Cache<int, string>();
+        //cache.Add(1, "Ahmed");
+        //cache.Add(2, "Ali");
+        //cache.Add(3, "Mohamed");
+
+        //Console.WriteLine(cache.Get(1));       // Ahmed
+        //Console.WriteLine(cache.Get(4));       // null
+        //Console.WriteLine(cache.Contains(2));  // true
+        //cache.Remove(3);
+        //Console.WriteLine(cache.Contains(3));  // false
+
+        //cache.Expired();     // clear cach
+
+        #endregion
         #endregion
 
         #endregion
