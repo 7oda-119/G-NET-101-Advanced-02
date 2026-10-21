@@ -1,5 +1,6 @@
 ﻿using C_Advanced02.BaseClassConstrain;
 using C_Advanced02.ClassConstrain;
+using C_Advanced02.InAndOut;
 using C_Advanced02.InterfaceConstrain;
 using C_Advanced02.MultibleConstrain;
 using C_Advanced02.NewConstrain;
@@ -74,6 +75,11 @@ internal class Program
         /*
          *   Q13: What does the 'default' keyword do in generics?
          *   Answer: The default keyword returns the default value of a type parameter T. Since T can be a value type or a reference type, default provides a default value of a type automatically.
+         */
+
+        /*
+         *   Q15: What is covariance? Explain the 'out' keyword.
+         *   Answer: Covariance allows you to use a more derived (child) type than originally specified, Its applied to output positions (such as return types of methods or read-only properities) and is marked with the out keyword.
          */
         #endregion
 
@@ -171,6 +177,13 @@ internal class Program
 
         //Console.WriteLine(names.GetItem(0)); 
         //Console.WriteLine(names.GetItem(4));  // output will be null because there are no index 4
+        #endregion
+
+        #region Qu15
+        //IProducer<Car> carProducer = new CarProducer();     // carProducer points to a CarProducer object that return new Car()
+        //IProducer<Vehical> vehicalProducer = carProducer;   // Covariance: IProducer<Car> can be assigned to IProducer<Vehicle>
+        //Vehical vehicle = vehicalProducer.Get();            // Get() returns a Car object, but it is stored in a Vehicle reference
+        //Console.WriteLine(vehicle.GetType().Name);
         #endregion
         #endregion
 
