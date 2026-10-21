@@ -71,6 +71,10 @@ internal class Program
          *           Example : public class SoundPlayer<T> where T : class, ISound, new() { }     ==> T must be a reference type, implement the ISound interface, and have a public parameterless constructor
          */
 
+        /*
+         *   Q13: What does the 'default' keyword do in generics?
+         *   Answer: The default keyword returns the default value of a type parameter T. Since T can be a value type or a reference type, default provides a default value of a type automatically.
+         */
         #endregion
 
         #region Practical
